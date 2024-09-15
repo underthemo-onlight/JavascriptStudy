@@ -23,11 +23,10 @@ function addArray() {
 
 //대문자로 변환
 function wordMap() {
-    resultNode.innerHTML = `<ul>`
-    for (let i = 0; i < wordlist.length; i++){
-        resultNode.innerHTML += `<li> ${wordlist[i].toUpperCase()}`
-    }
-    resultNode.innerHTML += `</ul>`
+    let resultArray = wordlist.map((value) => {
+        return value.toUpperCase()
+    })
+    printResult(resultArray)
     return
 }
 
