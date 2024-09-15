@@ -15,9 +15,12 @@ function printResult(array) {
 //배열에 단어 추가
 function addArray() {
     let wordNode = document.getElementById('word')
-    word = wordNode.value
-    wordlist.push(word)
-    printResult(wordlist)
+    let word = wordNode.value
+    if (word) { // 빈값이 아닌 경우에만 추가
+        wordlist.push(word)
+        printResult(wordlist)
+        wordNode.value = "" //입력 필드 초기화
+    }
     return
 }
 
