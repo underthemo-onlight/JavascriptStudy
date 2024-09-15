@@ -5,7 +5,7 @@ let wordlist = new Array()
 
 function printResult(array) {
     let result = `<ul>`
-    array.forEach((value, index) => {
+    array.forEach((value) => {
         result += `<li>${value}</li>`
     });
     result += `</ul>`
@@ -43,7 +43,8 @@ function wordFilter() {
 
 //순서대로 정렬
 function wordSort() {
-    let resultArray = wordlist.sort()
-    printResult(resultArray)
+    let duplicateArray = [...wordlist]
+    duplicateArray.sort()
+    printResult(duplicateArray)
     return
 }
