@@ -3,17 +3,21 @@
 let resultNode = document.getElementById('result')
 let wordlist = new Array()
 
+function printResult(array) {
+    let result = `<ul>`
+    array.forEach((value, index) => {
+        result += `<li>${value}</li>`
+    });
+    result += `</ul>`
+    resultNode.innerHTML = result
+}
+
 //배열에 단어 추가
 function addArray() {
     let wordNode = document.getElementById('word')
     word = wordNode.value
     wordlist.push(word)
-    console.log(wordlist)
-    resultNode.innerHTML = `<ul>`
-    for (let i = 0; i < wordlist.length; i++){
-        resultNode.innerHTML += `<li> ${wordlist[i]} `
-    }
-    resultNode.innerHTML += `</ul>`
+    printResult(wordlist)
     return
 }
 
