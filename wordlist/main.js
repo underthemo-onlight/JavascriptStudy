@@ -46,8 +46,15 @@ function wordFilter() {
 
 //순서대로 정렬
 function wordSort() {
-    let duplicateArray = [...wordlist]
-    duplicateArray.sort()
-    printResult(duplicateArray)
-    return
+    // let duplicateArray = [...wordlist]
+    // duplicateArray.sort()
+    // printResult(duplicateArray)
+    // return
+
+    let resultArray = wordArray.sort((data1, data2) => {
+        if(data1 > data2) return 1
+        else if(data1 == data2) return 0
+        else return -1
+    })
+    printResult(resultArray)
 }
