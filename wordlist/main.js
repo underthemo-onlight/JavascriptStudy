@@ -32,24 +32,18 @@ function wordMap() {
 
 //단어 길이 비교 
 function wordFilter() {
-    resultNode.innerHTML = `<ul>`
-    for (let i = 0; i < wordlist.length; i++){
-        if(wordlist[i].length >= 5){
-            resultNode.innerHTML += `<li> ${wordlist[i]}`
+    let resultArray = wordlist.filter((value) => {
+        if(value.length >= 5){
+            return value
         }
-    }
-    resultNode.innerHTML += `</ul>`
+    })
+    printResult(resultArray)
     return
 }
 
 //순서대로 정렬
 function wordSort() {
-    let sortedWords = wordlist.sort()
-    
-    resultNode.innerHTML = `<ul>`
-    for (let i = 0; i < sortedWords.length; i++){
-        resultNode.innerHTML += `<li> ${sortedWords[i]}`
-    }
-    resultNode.innerHTML += `</ul>`
+    let resultArray = wordlist.sort()
+    printResult(resultArray)
     return
 }
