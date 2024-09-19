@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var address
+        var addr
         opener.child = this
 
         function addAddress(){
-            address = document.getElementById('address').value
-            console.log(address)
-            if(address == null || address == ''){
+            addr = document.getElementById('address').value
+            console.log(addr)
+            if(addr == null || addr.trim() == ''){
                 window.alert('주소를 입력해야 합니다.')
             } else {
-                opener.outputAddress()
+                opener.resultAddr()
                 window.close()
             }
         }
