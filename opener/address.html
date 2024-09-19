@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var address
+        opener.child = this
+
+        function addAddress(){
+            address = document.getElementById('address').value
+            console.log(address)
+            if(address == null || address == ''){
+                window.alert('주소를 입력해야 합니다.')
+            } else {
+                opener.outputAddress()
+                window.close()
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>주소</h1>
+    <input type="text" id="address"/>
+    <button onclick="addAddress()">입력</button>
+</body>
+</html>
