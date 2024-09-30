@@ -73,8 +73,12 @@ function payment(){
     if(selectedArray.length == 0) {
         alert('결제할 상품을 선택해야 합니다.')
     } else {
-        
+        openChild()
     }
+}
+
+function openChild(){
+    window.open('payment.html', '_blank', 'left=200, top=200, width=400, height=600')
 }
 
 setting()
