@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .article {
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        .article-main {
+            flex: 2;
+            padding-right: 20px;
+        }
+        .article-main {
+            flex: 2;
+            padding-right: 20px;
+        }
+        .article-image {
+            flex: 1;
+            max-width: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>News Search</h1>
+    <input type="text" id="searchInput">
+    <button id="search">Search</button>
+    <div id="searchResult"></div>
+    <script src="main.js"></script>
+</body>
+</html>
